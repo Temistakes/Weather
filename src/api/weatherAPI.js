@@ -21,7 +21,7 @@ export const weatherAPI = {
                 temp: `${data.current.temperature_2m}${data.current_units.temperature_2m}`,
                 weather: `${data.current.weather_code}`,
                 humidity: `${data.current.relative_humidity_2m}${data.current_units.relative_humidity_2m}`,
-                windSpeed: `${data.current.wind_speed_10m} ${data.current_units.wind_speed_10m}`,
+                windSpeed: `${data.current.wind_speed_10m}`,
             }
         });
     },

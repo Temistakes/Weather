@@ -41,7 +41,10 @@ export default function WeatherForm({ getData }) {
     }
 
     const validationSchema = yup.object().shape({
-        name: yup.string().required("Данная строка обязательна"),
+        name: yup
+            .string()
+            .required("Данная строка обязательна")
+            .max(50, "Слишком большая длина города"),
     });
 
     return (

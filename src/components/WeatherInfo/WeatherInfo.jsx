@@ -6,6 +6,7 @@ const WeatherInfoStyled = styled.div`
     .title {
         font-weight: 600;
         font-size: 2.5rem;
+        word-break: break-all;
     }
 
     .temp {
@@ -49,7 +50,7 @@ export default function WeatherInfo({
                     {weather.weather}
                 </li>
                 <li>Влажность: {humidity}</li>
-                <li>Скорость ветра: {windSpeed}</li>
+                <li>Скорость ветра: {windSpeed} км/ч</li>
             </ul>
         </WeatherInfoStyled>
     );

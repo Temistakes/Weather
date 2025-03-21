@@ -1,15 +1,15 @@
 export const weatherCodes = {
     0: {
         weather: "Чистое небо",
-        icon: "ic-sun",
+        icon: "fa-solid fa-sun",
     },
     1: {
         weather: "Преимущественно ясно",
-        icon: "ic-sun",
+        icon: "fa-regular fa-sun",
     },
     2: {
         weather: "Переменная облачность",
-        icon: "ic-cloud-sun",
+        icon: "fa-solid fa-cloud-sun",
     },
     3: {
         weather: "Пасмурно",
@@ -45,15 +45,15 @@ export const weatherCodes = {
     },
     61: {
         weather: "Слабый дождь",
-        icon: "ic-cloud-rain",
+        icon: "fa-solid fa-droplet",
     },
     63: {
         weather: "Дождь",
-        icon: "ic-cloud-rain",
+        icon: "fa-solid fa-cloud-rain",
     },
     65: {
         weather: "Сильный дождь",
-        icon: "ic-cloud-rain",
+        icon: "fa-solid fa-cloud-showers-water",
     },
     66: {
         weather: "Легкий ледяной дождь",
@@ -81,11 +81,11 @@ export const weatherCodes = {
     },
     80: {
         weather: "Слабый ливень",
-        icon: "ic-cloud-rain",
+        icon: "fa-solid fa-droplet",
     },
     81: {
         weather: "Ливень",
-        icon: "ic-cloud-rain",
+        icon: "fa-solid fa-droplet",
     },
     82: {
         weather: "Сильный ливень",
