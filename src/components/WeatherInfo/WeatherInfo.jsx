@@ -43,7 +43,7 @@ export default function WeatherInfo({
 }) {
     return (
         <WeatherInfoStyled>
-            <h1 className="title">Погода в {city}</h1>
+            <h1 className="title">Погода в городе {city}</h1>
             <span className="temp">{temp}</span>
             <ul className="weather-list">
                 <li className={cls(weather.icon, "weather")}>

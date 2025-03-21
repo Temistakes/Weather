@@ -9,14 +9,14 @@ const SET_LOADED = "weather/app/SET_LOADED";
 
 let initialState = {
     isLoading: false,
-    temp: null,
+    temp: "?",
     weather: {
         weather: "Не определено",
         icon: "fa-solid fa-ban",
     },
-    humidity: null,
-    windSpeed: null,
-    city: null,
+    humidity: "?",
+    windSpeed: "?",
+    city: "?",
     loaded: false,
 }
 
@@ -72,12 +72,12 @@ export const setLoaded = val => ({
 
 export const getData = (city) => async dispatch => {
     dispatch(setLoading(true));
-    dispatch(setCity(city));
 
     try {
         const coords = await cityAPI.getCoords(city);
         const response = await weatherAPI.getData(...coords);
         dispatch(setData(response));
+        dispatch(setCity(city));
     }   catch (err) {
         console.error(err);
     }   finally {
