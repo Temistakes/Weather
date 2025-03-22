@@ -21,3 +21,7 @@ export function getCity(state) {
 export function getLoaded(state) {
     return state.app.loaded;
 }
+
+export function getIsLoading(state) {
+    return state.app.isLoading;
+}

@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import Weather from "../Weather/Weather";
 import {
     getCity,
@@ -8,25 +7,11 @@ import {
     getWeather,
     getWindSpeed,
     getLoaded,
+    getIsLoading,
 } from "../../redux/selectors/appSelectors";
 import { connect } from "react-redux";
 import { getData } from "../../redux/reducers/appReducer";
-
-const WeatherSectionStyled = styled.section`
-    height: 100vh;
-    width: 100%;
-    background: rgb(151, 151, 151)
-        url("https://avatars.mds.yandex.net/get-vertis-journal/4465444/kiril-dobrev-v63UL8s28Ew-unsplash.jpg_1723961098949/1600x1600")
-        no-repeat center / cover;
-    background-blend-mode: multiply;
-
-    .container {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-`;
+import { S_WeatherContainer, S_WeatherSection } from "./WeatherSectionStyles";
 
 function WeatherSection({
     city,
@@ -35,11 +20,12 @@ function WeatherSection({
     humidity,
     windSpeed,
     loaded,
+    isLoading,
     getData,
 }) {
     return (
-        <WeatherSectionStyled>
-            <div className="container">
+        <S_WeatherSection>
+            <S_WeatherContainer>
                 <Weather
                     city={city}
                     temp={temp}
@@ -47,10 +33,11 @@ function WeatherSection({
                     humidity={humidity}
                     windSpeed={windSpeed}
                     loaded={loaded}
+                    isLoading={isLoading}
                     getData={getData}
                 />
-            </div>
-        </WeatherSectionStyled>
+            </S_WeatherContainer>
+        </S_WeatherSection>
     );
 }
 
@@ -61,6 +48,7 @@ const mapStateToProps = state => ({
     humidity: getHumidity(state),
     windSpeed: getWindSpeed(state),
     loaded: getLoaded(state),
+    isLoading: getIsLoading(state),
 });
 
 export default connect(mapStateToProps, {

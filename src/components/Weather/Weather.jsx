@@ -1,34 +1,31 @@
-import React from "react";
-import styled from "styled-components";
-import SocialBtn from "../general/SocialBtn/SocialBtn";
+import React, { useState, useRef } from "react";
 import WeatherInfo from "../WeatherInfo/WeatherInfo";
 import WeatherForm from "../WeatherForm/WeatherForm";
+import { S_Weather, S_Socials, S_ContentWrap } from "./WeatherStyles";
+import { S_SocialBtn } from "../../styles/components";
+import Loader from "../common/Loader/Loader";
+import { Transition } from "react-transition-group";
 
-const WeatherStyled = styled.section`
-    max-width: 47.5rem;
-    width: 100%;
-    min-height: 20rem;
-    border-radius: 3.44rem;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 3.3125rem 4.375rem 2.6875rem;
+export default function Weather({ loaded, isLoading, ...props }) {
+    const nodeRef = useRef(null);
 
-    .socials {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        margin-top: 3.125rem;
-    }
-`;
-
-export default function Weather({ loaded, ...props }) {
     return (
-        <WeatherStyled>
+        <S_Weather>
             <WeatherForm getData={props.getData} />
-            {loaded && <WeatherInfo {...props} />}
-            <div className="socials">
-                <SocialBtn>
+            <S_ContentWrap>
+                <Transition nodeRef={nodeRef} in={isLoading} timeout="300">
+                    {state => <Loader className={state} />}
+                </Transition>
+                <Transition
+                    nodeRef={nodeRef}
+                    in={loaded && !isLoading}
+                    timeout="300"
+                >
+                    {state => <WeatherInfo {...props} className={state} />}
+                </Transition>
+            </S_ContentWrap>
+            <S_Socials>
+                <S_SocialBtn>
                     <svg
                         width="14"
                         height="25"
@@ -41,8 +38,8 @@ export default function Weather({ loaded, ...props }) {
                             fill="#F7F7F7"
                         />
                     </svg>
-                </SocialBtn>
-                <SocialBtn>
+                </S_SocialBtn>
+                <S_SocialBtn>
                     <svg
                         width="25"
                         height="25"
@@ -62,8 +59,8 @@ export default function Weather({ loaded, ...props }) {
                             </clipPath>
                         </defs>
                     </svg>
-                </SocialBtn>
-                <SocialBtn>
+                </S_SocialBtn>
+                <S_SocialBtn>
                     <svg
                         width="25"
                         height="25"
@@ -76,8 +73,8 @@ export default function Weather({ loaded, ...props }) {
                             fill="#F7F7F7"
                         />
                     </svg>
-                </SocialBtn>
-            </div>
-        </WeatherStyled>
+                </S_SocialBtn>
+            </S_Socials>
+        </S_Weather>
     );
 }

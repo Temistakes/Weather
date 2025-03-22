@@ -1,114 +1,114 @@
 export const weatherCodes = {
     0: {
         weather: "Чистое небо",
-        icon: "fa-solid fa-sun",
+        icon: ["fas", "sun"],
     },
     1: {
         weather: "Преимущественно ясно",
-        icon: "fa-regular fa-sun",
+        icon: ["far", "sun"],
     },
     2: {
         weather: "Переменная облачность",
-        icon: "fa-solid fa-cloud-sun",
+        icon: ["fas", "cloud-sun"],
     },
     3: {
         weather: "Пасмурно",
-        icon: "fa-solid fa-cloud",
+        icon: ["fas", "cloud"],
     },
     45: {
         weather: "Туман",
-        icon: "fa-solid fa-smog",
+        icon: ["fas", "smog"],
     },
     48: {
         weather: "Отложение инейного тумана",
-        icon: "fa-solid fa-smog",
+        icon: ["fas", "smog"],
     },
     51: {
         weather: "Слабая морось",
-        icon: "fa-solid fa-smog",
+        icon: ["fas", "smog"],
     },
     53: {
         weather: "Умеренная морось",
-        icon: "fa-solid fa-smog",
+        icon: ["fas", "smog"],
     },
     55: {
         weather: "Плотная морось",
-        icon: "fa-solid fa-smog",
+        icon: ["fas", "smog"],
     },
     56: {
         weather: "Легкий ледяной дождь",
-        icon: "fa-solid fa-cloud-meatball",
+        icon: ["fas", "cloud-meatball"],
     },
     57: {
         weather: "Плотный ледяной дождь",
-        icon: "fa-solid fa-cloud-meatball",
+        icon: ["fas", "cloud-meatball"],
     },
     61: {
         weather: "Слабый дождь",
-        icon: "fa-solid fa-droplet",
+        icon: ["fas", "droplet"],
     },
     63: {
         weather: "Дождь",
-        icon: "fa-solid fa-cloud-rain",
+        icon: ["fas", "cloud-rain"],
     },
     65: {
         weather: "Сильный дождь",
-        icon: "fa-solid fa-cloud-showers-water",
+        icon: ["fas", "cloud-showers-water"],
     },
     66: {
         weather: "Легкий ледяной дождь",
-        icon: "fa-solid fa-cloud-meatball",
+        icon: ["fas", "cloud-meatball"],
     },
     67: {
         weather: "Плотный ледяной дождь",
-        icon: "fa-solid fa-cloud-meatball",
+        icon: ["fas", "cloud-meatball"],
     },
     71: {
         weather: "Слабый снегопад",
-        icon: "fa-regular fa-snowflake",
+        icon: ["fas", "snowflake"],
     },
     73: {
         weather: "Снегопад",
-        icon: "fa-regular fa-snowflake",
+        icon: ["fas", "snowflake"],
     },
     75: {
         weather: "Сильный снегопад",
-        icon: "fa-regular fa-snowflake",
+        icon: ["fas", "snowflake"],
     },
     77: {
         weather: "Снежные зерна",
-        icon: "fa-solid fa-cloud-meatball",
+        icon: ["fas", "cloud-meatball"],
     },
     80: {
         weather: "Слабый ливень",
-        icon: "fa-solid fa-droplet",
+        icon: ["fas", "droplet"],
     },
     81: {
         weather: "Ливень",
-        icon: "fa-solid fa-droplet",
+        icon: ["fas", "droplet"],
     },
     82: {
         weather: "Сильный ливень",
-        icon: "fa-solid fa-cloud-showers-water",
+        icon: ["fas", "cloud-showers-water"],
     },
     85: {
         weather: "Слабый снежный ливень",
-        icon: "fa-solid fa-cloud-meatball",
+        icon: ["fas", "cloud-meatball"],
     },
     86: {
         weather: "Сильный снежный ливень",
-        icon: "fa-solid fa-cloud-meatball",
+        icon: ["fas", "cloud-meatball"],
     },
     95: {
         weather: "Гроза",
-        icon: "fa-solid fa-cloud-bolt",
+        icon: ["fas", "cloud-bolt"],
     },
     96: {
         weather: "Гроза с градом",
-        icon: "fa-solid fa-cloud-bolt",
+        icon: ["fas", "cloud-bolt"],
     },
     99: {
         weather: "Гроза с градом",
-        icon: "fa-solid fa-cloud-bolt",
+        icon: ["fas", "cloud-bolt"],
     },
 }

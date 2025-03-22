@@ -1,39 +1,10 @@
 import React from "react";
-import styled from "styled-components";
 import { Formik, Form, Field } from "formik";
 import * as yup from "yup";
-import RoundBtn from "../general/RoundBtn/RoundBtn";
 import cls from "classnames";
-
-const FormStyled = styled.div`
-    margin-bottom: 2.625rem;
-
-    .input-group {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.1);
-        background-blend-mode: multiply;
-        border-radius: 3.44rem;
-        padding-right: 1rem;
-        border: 2px solid rgba(255, 255, 255, 0.1);
-        transition: border-color 0.3s ease;
-
-        .input {
-            width: 100%;
-            padding: 1.125rem 1rem 1.125rem 2.5rem;
-            font-size: 1.88rem;
-
-            &::placeholder {
-                color: rgba(255, 255, 255, 0.3);
-            }
-        }
-
-        &.error {
-            border-color: tomato;
-        }
-    }
-`;
+import { S_WeatherForm } from "./WeatherFormStyles";
+import { S_RoundBtn, S_InputGroup } from "../../styles/components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function WeatherForm({ getData }) {
     function handleSubmit(values) {
@@ -56,9 +27,9 @@ export default function WeatherForm({ getData }) {
             validationSchema={validationSchema}
         >
             {({ values, touched, errors }) => (
-                <FormStyled>
+                <S_WeatherForm>
                     <Form>
-                        <div
+                        <S_InputGroup
                             className={cls("input-group", {
                                 error: errors.name && touched.name,
                             })}
@@ -70,14 +41,15 @@ export default function WeatherForm({ getData }) {
                                 type="text"
                                 className="input"
                             />
-                            <RoundBtn
-                                style={{ color: "black" }}
-                                className={"submit-btn"}
-                                cls="fa-lg fa-solid fa-magnifying-glass"
-                            ></RoundBtn>
-                        </div>
+                            <S_RoundBtn>
+                                <FontAwesomeIcon
+                                    icon={["fas", "magnifying-glass"]}
+                                    size="lg"
+                                />
+                            </S_RoundBtn>
+                        </S_InputGroup>
                     </Form>
-                </FormStyled>
+                </S_WeatherForm>
             )}
         </Formik>
     );
