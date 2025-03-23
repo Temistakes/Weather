@@ -10,7 +10,7 @@ export const S_Container = styled.div`
 `;
 
 export const S_Main = styled.main`
-    min-height: 100vh;
+    min-height: 100svh;
 `;
 
 // Buttons
