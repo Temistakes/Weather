@@ -70,14 +70,14 @@ export const setLoaded = val => ({
     val,
 });
 
-export const getData = (city) => async dispatch => {
+export const getData = (data) => async dispatch => {
     dispatch(setLoading(true));
 
     try {
-        const coords = await cityAPI.getCoords(city);
+        const coords = data.isCity ? await cityAPI.getCoords(data.city) : data.coords;
         const response = await weatherAPI.getData(...coords);
         dispatch(setData(response));
-        dispatch(setCity(city));
+        dispatch(setCity(data.isCity ? data.city : "'текущий'"));
     }   catch (err) {
         console.error(err);
     }   finally {

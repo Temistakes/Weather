@@ -7,9 +7,8 @@ import { S_RoundBtn, S_InputGroup } from "../../styles/components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const WeatherForm = ({ getData }) => {
-    console.log("Render!");
     function handleSubmit(values) {
-        getData(values.name);
+        getData({ isCity: true, city: values.name });
     }
 
     const validationSchema = yup.object().shape({

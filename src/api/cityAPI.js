@@ -15,4 +15,10 @@ export const cityAPI = {
         });
     },
 
+    // getCity(coords) {
+    //     return instance.get(`/search?key=pk.32d4d2c796e9bcd01465c3c97b842f1e&lat=${coords[0]}&lon=${coords[1]}&format=json`).then(response => {
+    //         console.log(response);
+    //     });
+    // },
+
 }
