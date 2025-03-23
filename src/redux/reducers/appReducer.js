@@ -74,9 +74,7 @@ export const getData = (data) => async dispatch => {
     dispatch(setLoading(true));
 
     try {
-        console.log(data.city);
         const coords = data.isCity ? await cityAPI.getCoords(data.city) : data.coords;
-        console.log(coords);
         const response = await weatherAPI.getData(...coords);
         dispatch(setData(response));
         dispatch(setCity(data.isCity ? data.city : "'текущий'"));
