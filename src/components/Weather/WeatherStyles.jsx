@@ -8,16 +8,24 @@ export const S_Weather = styled.section`
     background: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 3.3125rem 4.375rem 2.6875rem;
-`;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
 
-export const S_Socials = styled.section`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 3.125rem;
+    @media all and (max-width: 600px) {
+        & {
+            max-height: 100%;
+            padding: 2rem 1.5rem;
+            overflow: auto;
+            border-radius: 1.75rem;
+        }
+    }
 `;
 
 export const S_ContentWrap = styled.section`
     position: relative;
+    height: 16.625rem;
+    overflow: auto;
+
+    &.none {
+        display: none;
+    }
 `;

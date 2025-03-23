@@ -33,6 +33,18 @@ export const S_RoundBtn = styled.button`
         border-color: black;
         color: white;
     }
+
+    @media all and (max-width: 600px) {
+        & {
+            height: 2.75rem;
+            min-width: 2.75rem;
+            width: 2.75rem;
+
+            svg {
+                transform: scale(0.8);
+            }
+        }
+    }
 `;
 
 export const S_SocialBtn = styled(S_RoundBtn)`
@@ -45,6 +57,12 @@ export const S_Title = styled.h1`
     font-weight: 600;
     font-size: 2.5rem;
     word-break: break-all;
+    line-clamp: 2;
+    overflow: hidden;
+
+    @media all and (max-width: 600px) {
+        font-size: 1.75rem;
+    }
 `;
 
 // Inputs
@@ -72,5 +90,14 @@ export const S_InputGroup = styled.div`
 
     &.error {
         border-color: tomato;
+    }
+
+    @media all and (max-width: 600px) {
+        & {
+            padding-right: 0.75rem;
+            input {
+                font-size: 1.125rem;
+            }
+        }
     }
 `;

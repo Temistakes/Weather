@@ -36,7 +36,7 @@ export const S_LoaderCircle = styled.div`
 
 export const S_Loader = styled.div`
     width: 100%;
-    height: 15.1875rem;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Formik, Form, Field } from "formik";
 import * as yup from "yup";
 import cls from "classnames";
@@ -6,7 +6,8 @@ import { S_WeatherForm } from "./WeatherFormStyles";
 import { S_RoundBtn, S_InputGroup } from "../../styles/components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function WeatherForm({ getData }) {
+const WeatherForm = ({ getData }) => {
+    console.log("Render!");
     function handleSubmit(values) {
         getData(values.name);
     }
@@ -53,4 +54,6 @@ export default function WeatherForm({ getData }) {
             )}
         </Formik>
     );
-}
+};
+
+export default memo(WeatherForm);

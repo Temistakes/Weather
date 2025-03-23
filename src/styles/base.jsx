@@ -136,6 +136,21 @@ export default createGlobalStyle`
         font-weight: 400;
         font-style: normal;
         line-height: normal;
-        font-family: "Poppins", sans-serif;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    ::-webkit-scrollbar {
+    width: 0.5rem;
+    border-radius: 1.25rem;
+}
+
+    ::-webkit-scrollbar-track {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 6.25rem ;
+        border: 2rem solid white;
+        border-radius: 2rem;
     }
 `;
