@@ -12,6 +12,7 @@ export const S_Weather = styled.section`
 
     @media all and (max-width: 600px) {
         & {
+            min-height: 13rem;
             max-height: 100%;
             padding: 2rem 1.5rem;
             overflow: auto;
